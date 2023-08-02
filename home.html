@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/eca18a34e2.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: #29433d;
+        }
+        
+        p{
+            line-height: 1.5em;
+        }
+        
+        .flex-row{
+            display: flex;
+        }
+        .header{
+            background-color: #1e2025;
+            padding:5px;
+            padding-left: 60px;
+        }
+        .header h1{
+            color:#92a4b1;
+        }
+
+        /* logo*/
+        .logo{
+            width:66.66%;
+        }
+        .header .button {
+            padding:0.5rem;
+            width:33.33%;
+            text-align: right;
+        }
+        .button a{
+            text-decoration: none;
+            color:#1e2025;
+            background-color: #92a4b1;
+            padding: 5px;
+        }
+        .button a:hover{
+            font-weight: bold;
+            
+        }
+
+        /* navbar  navigation */
+        .navbar{
+            margin-top: 1px;            
+            width:100%;
+            background-color: #1e2025;
+        }
+        .navbar a{
+            text-decoration: none;
+            color:#92a4b1;
+            padding: 5px 20px;
+            
+        }
+        .navbar a:hover{
+            font-weight:bold;
+        }
+
+        /*header section*/
+        .header-section{
+            margin:1px;
+            background-color: #92a4b1;
+            padding:50px 40px;
+            color: #1e2025;
+            padding-left: 70px;
+        }
+        .header-section section h1{
+            font-size: 40px;
+        }
+        .header-section .button{
+            display: flex;
+            margin: 15px 5px;
+        }
+        .header-section .button a{
+            
+            background-color: #1e2025;
+            color: #92a4b1;
+            margin:5px;
+            padding: 10px 15px;
+            
+        }
+        .header-section .button a:hover{
+            font-weight: bold;
+        }
+        .header-section section{
+            margin: 10px 0;
+        }
+
+        /* learn-things */
+        .learn-things{
+            margin: 15px 20%;
+            padding: 20px;
+            background-color: #1e2025;
+            color: #92a4b1;
+        }
+        .flex-row{
+            display: flex;
+        }
+        .flex-row .col-sm-4{
+            width: 33.33%;
+            margin: 20px;
+        }
+        .col-sm-8 .col-sm-4{
+            width: 33.33%;
+            margin:10px;
+            text-align: center;
+        }
+        .col-sm-8{
+            width: 66.66%;
+            margin:20px;
+        }
+        .col-sm-8 .col-sm-4 i{
+            
+            font-size:46px;
+        }
+        .col-sm-8 .col-sm-4 i small{
+            font-size: x-small;
+        }
+        .col-sm-8 .col-sm-4 i:hover{
+            font-weight: bold;
+            
+        }
+
+        /* Content  */
+        .content{
+            background-color: #92a4b1;
+            padding:10% 8%;
+            color: #1e2025;
+        }
+        .second{
+            margin-left: 40px;
+        }
+        .col-sm-6{
+            width: 50%;
+        }
+        .content .col-sm-6 h4{
+            margin:10px 0;
+            border-bottom: 1px solid #29433d;
+            
+        }
+        
+        .content .col-sm-6 .heading{
+            margin: 25px 0;
+            font-size: 30px;
+        }
+        .content .col-sm-6 .p p{
+            margin: 15px 0;
+        }
+        .content .col-sm-6 .row a{       
+            background-color: #1e2025;
+            color: #92a4b1;
+            margin:5px;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        .content .col-sm-6 .row a:hover{       
+            text-decoration-line: underline;
+        }
+        .content .col-sm-6 .row{
+            padding: 25px 0;
+        }
+
+
+        /* list */
+        .list ul{
+            list-style: square;
+        
+        }
+        .list li{
+            list-style-position: inside;
+            margin-top: 30px;
+            font-size: small;
+        }
+        .list h3{
+            padding: 4px 0;
+        }
+        .list hr{
+            margin:10px 0;
+        }
+        .list i{
+            font-size: small;
+        }
+
+        /* news content */
+        .news-content{
+            background-color: #dfe3e6;
+            padding:5% 8%;
+            color: #29433d;
+        }
+        .news-content .col-sm-3{
+            width: 25%;
+            margin: 7px;
+            text-align: center;
+        }
+        .col-sm-3 p{
+            font-size: 14px;
+        }
+        .news-content .col-sm-3 img{
+            width: 90%;
+            
+        }
+        .news-content h3{
+            margin: 10px 0;
+        }
+        .news-content p{
+            margin: 5px 0;
+        }
+
+        /* Review of students************************** */
+        .review{
+            background-color: #92a4b1;
+            padding:5% 8%;
+            color: #1e2025;
+        }
+        .review .section1{
+            text-align: center;
+            padding:20px 0;
+            margin-bottom: 46px;
+        }
+        .review .section1 h2{
+            padding-bottom: 25px;
+            font-size: 28px;
+        }
+        .review .col-sm-3{
+            width: 25%;
+        }
+        .review .col-sm-9{
+            width: 75%;
+            min-width: 804px;
+        }
+        .review .section2{
+            padding: 0 30px;
+            position: relative;
+            
+            height: 195px;
+            max-width: 1194px;
+            overflow:hidden;
+            display:flex;
+            text-align: center;
+        }
+        .review .section2 .slides{
+            padding: 0 45px;
+            padding-bottom:10px;
+            width: 1073px;
+            height: 195px;
+            
+        }
+        .review .section2 img{
+            border-radius: 50%;
+            width: 195px;
+            
+        }
+        .review .section2 p{
+            line-height: 2rem;
+            padding-bottom: 20px;
+        }
+        .review .section2 h4{
+            padding:10px 0;
+        }
+        .review .section2 span{
+            color:#29433d;
+            font-size: small;
+        }
+        
+
+        /* TEacher******************************** */
+
+        .teacher{
+            text-align: center;
+            color: #92a4b1;
+            padding:5% 8%;
+        }
+        .teacher .heading{
+            margin-bottom: 25px;
+        }
+        .teacher .heading small{
+            font-size: x-small;
+        }
+        .teacher .col-sm-20{
+            width:20%;
+        }
+        .teacher .col-sm-20 img{
+            width:90%;
+        }
+
+      
+
+        /* foooter css */
+        .row footer{
+            background-color: #1e2025;
+            padding:60px 15%;
+            color: #92a4b1;
+        }
+        footer .col-sm-3{
+            width:25%;
+            padding: 10px;
+        }
+        footer .heading small{
+            font-size: x-small;
+            display: block;
+        }
+        footer .heading{
+            font-size:28px;
+            height:50px;
+            margin-bottom: 10px;
+        }
+        footer p{
+            font-size: small;
+        }
+        footer i{
+            font-size: small;
+            display: block;
+            margin-bottom: 3px;
+        }
+        footer .margin{
+            margin-top: 20px;
+        }
+        footer a{
+            text-decoration: none;
+            color:#92a4b1;
+            padding: 5px 20px;
+            
+        }
+        footer a:hover{
+            font-weight:bold;
+        }
+        footer input{
+            background-color: #dfe3e6;
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            margin-bottom: 10px;
+        }
+        footer input:active{
+            border:none;
+        }
+        footer a{
+            background-color:#92a4b1;
+            color: #1e2025;
+            border-radius: 5px;
+        }
+        
+        .bottom{
+            padding: 5px 15%;
+            text-align: right;
+            background-color: #1e2025;
+            color: #92a4b1;
+            font-size: small;
+        }
+        .bottom hr{
+                margin-bottom: 5px;
+        }
+        .bottom .copy{
+            float: left;
+        }
+
+                /*Css For images*/
+                .top {
+	animation-name: fade;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 1s;
+	animation-direction: alternate;
+}
+
+
+@keyframes fade {
+	0% {
+		opacity: 1;
+	}
+	25% {
+		opacity: 1;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+    </style> 
+</head>
+<body>
+    <div class="container">
+
+        <!-- Header header header -->
+        <div class="row flex-row header">
+            <div class="logo">
+                <h1>HCOLE</h1>
+            </div>
+            <div class="button">
+                <a href="">Apply Now</a>
+            </div>
+        </div>
+        <div class="row flex-row navbar">
+            <a href=""><i class="bi bi-house-door-fill"></i> Home</a>
+            <a href=""><i class="bi bi-book-half"></i> Academia</a>
+            <a href=""><i class="bi bi-person-fill"></i>Admission</a>
+            <a href=""><i class="bi bi-image"></i> Gallery</a>
+        </div>
+
+        <div class="row header-section">
+            <section>
+                <h1>Choose the right <br> theme for education</h1>
+            </section>
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At explicabo voluptates,<br>commodi dolorum expedita molestiae aspernatur minus similique illo ullam?</p>
+
+            </section>
+            <section class="button">
+                <a href="">Read More</a>
+                <a href="">Get Started</a>
+            </section>
+        </div>
+        
+        <!-- leanr things -->
+
+
+        <div class="row learn-things flex-row">
+            <div class="col-sm-4">
+                <h2>
+                    Best platform <br>to learn <br>everything
+                </h2>
+            </div>
+            <div class="col-sm-8 flex-row">
+                <div class="language col-sm-4">
+                    <i class="bi bi-globe"><br><small>Language</small></i>
+                </div>
+                <div class="Business col-sm-4">
+                    <i class="bi bi-bar-chart-line"><br><small>Business</small></i>
+                </div>
+                <div class="literature col-sm-4">
+                    <i class="bi bi-book"><br><small>Literature</small></i>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Contents content content -->
+
+        <div class="row content flex-row">
+            <div class="col-sm-6">
+                <div>
+                    <h4>About Us</h4>
+                </div>
+                <div class="heading">
+                    <h2>Welcome to <br>Hcole</h2> 
+                </div>
+                <div class="p">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iusto cumque quidem! Dicta accusantium, consectetur explicabo vel amet sit quos at provident quas ducimus excepturi, voluptatum fugiat. Minus quaerat ipsa quidem quia voluptatem, nihil error.</p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem mollitia explicabo repellat dicta rerum cupiditate incidunt labore porro voluptas pariatur sunt soluta, tempora id nesciunt.
+                    </p>
+                </div>
+                <div class="row">
+                    <a href="">Learn More</a>
+                </div>
+
+            </div>
+            <div class="col-sm-6 second">
+                <div class="row">
+                    <div class="events_heading">
+                        <h2>Upcoming events</h2>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <li>1 March 2023</li>
+                            <h3>Campus clean workshop</h3>
+                            <i class="bi bi-alarm-fill">10:00AM 2:00PM</i>
+
+                            <hr>
+
+                            <li>2 March 2023</li>
+                            <h3>Tech Summit</h3>
+                            <i class="bi bi-alarm-fill">10:00AM 2:00PM</i>
+
+                            <hr>
+
+                            <li>3 March 2023</li>
+                            <h3>Environment conference</h3>
+                            <i class="bi bi-alarm-fill">10:00AM 2:00PM</i>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- new contents -->
+
+        <div class="row flex-row news-content">
+            <div class="col-sm-3">
+                <img src="Republic Day 1.jpg" alt="">
+                <h3>Celebrates Republic Day</h3>
+                <p>The Indian Institute of Technology Bombay (IIT Bombay) celebrated the 74th Republic Day on January 26, 2023. </p>
+            </div>
+            <div class="col-sm-3">
+                <img src="pic1_0.jpg" alt="">
+                <h3>Administrative Law and Policy Farming</h3>
+                <p>The Indian Institute of Technology Bombay (IIT Bombay) hosted Hon’ble Shri Justice Uday Umesh Lalit, Former Chief Justice of India on January 23, 2023</p>
+            </div>
+            <div class="col-sm-3">
+                <img src="Alumni Day 2022 DSA CSA Awardees.jpg" alt="">
+                <h3>Alumni Day 2023</h3>
+                <p>An alumni appreciation and gratitude programme Distinguished Service Awards were bestowed on six alumni members</p>
+            </div>
+            <div class="col-sm-3">
+                <img src="Techconnect Inauguration_1.jpg" alt="">
+                <h3>Techconnect 2023</h3>
+                <p>Dr. V. Narayanan, Director, Liquid Propulsion Systems Centre (LPSC), Indian Space Research Organisation (ISRO) along with Director of IIT</p>
+            </div>
+        </div>
+
+
+        <!-- Review of the students or people -->
+        <div class="row review">
+            <section class="section1">
+                <div class="row">
+                    <h2>Student Says About Us</h2>
+                    <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                </div>
+            </section>
+            <section class="section2">
+                <div class="slides flex-row slide1">
+                    <div class="col-sm-3">
+                        <img class="top" src="review/download.jfif" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam vel in animi error dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel magnam fugiat quas excepturi.</p>
+                            <h4>Manoj Cook</h4>
+                            <span>Mother</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slides flex-row slide1">
+                    <div class="col-sm-3">
+                        <img class="botm" src="review/backlit-beach-color-258109-4.png" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam vel in animi error dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel magnam fugiat quas excepturi.</p>
+                            <h4>Dhruv Cook</h4>
+                            <span>Mother</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slides flex-row slide3">
+                    <div class="col-sm-3">
+                        <img src="review/download.jfif" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam vel in animi error dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel magnam fugiat quas excepturi.</p>
+                            <h4>Monis Cook</h4>
+                            <span>Mother</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="slides flex-row slide4">
+                    <div class="col-sm-3">
+                        <img src="review/download.jfif" alt="">
+                    </div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quisquam vel in animi error dolorem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vel magnam fugiat quas excepturi.</p>
+                            <h4>Ayush Cook</h4>
+                            <span>Mother</span>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <!-- Teacher of the college -->
+        <div class="row">
+            <div class="teacher">
+                <div class="heading">
+                    <h2>
+                        Top Rating Instructors
+                    </h2>
+                    <small>Discover Your Perfect Programin Our Courses.</small>
+                </div>
+                <div class="row flex-row teacher-content">
+                    <div class="col-sm-20">
+                        <img src="teacher/download-removebg-preview.png" alt="">
+                        <h4>Sam </h4>
+                        <p><small>Bootstrap</small></p>
+                    </div>
+                    <div class="col-sm-20">
+                        <img src="teacher/images-removebg-preview (1).png" alt="">
+                        <h4>Ayush Nam</h4>
+                        <p><small>P.T.</small></p>
+                    </div>
+                    <div class="col-sm-20">
+                        <img src="teacher/images-removebg-preview.png" alt="">
+                        <h4>Snehal</h4>
+                        <p><small>Literature</small></p>
+                    </div>
+                    <div class="col-sm-20">
+                        <img src="teacher/images__1_-removebg-preview.png" alt="">
+                        <h4>Rutika</h4>
+                        <p><small>Science</small></p>
+                    </div>
+                    <div class="col-sm-20">
+                        <img src="teacher/png-transparent-google-logo-teacher-school-education-student-world-teachers-day-learning-teacher-education-removebg-preview.png" alt="">
+                        <h4>Sandwich</h4>
+                        <p><small>Backend</small></p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+        <!-- /* foooter-------------------- */ -->
+
+        <div class="row">
+            <footer class="flex-row">
+                <div class="col-sm-3">
+                    <h1 class="heading">
+                        HCOLE<small>University & College</small>
+                    </h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur labore delectus veritatis alias cum. Ea, officiis provident?</p>
+                </div>
+                <div class="col-sm-3">
+                    <h1 class="heading">
+                        Contact details
+                    </h1>
+                    <i class="bi bi-geo-alt-fill"> 4044, Aradhans Apartment, Thane-400006</i>
+                    <i class="bi bi-telephone-fill"> 012-3456-7890</i>
+                    <i class="bi bi-envelope-fill"> example@gmail.com</i>
+                </div>
+                <div class="col-sm-3">
+                    <h1 class="heading">
+                        Latest News
+                    </h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing</p>
+                    <i class="bi bi-calendar-event-fill"> 4 April 2023</i>
+                    <p class="margin">Lorem ipsum, dolor sit amet consectetur adipisicing</p>
+                    
+                    <i class="bi bi-calendar-event-fill"> 4 April 2023</i>
+
+                </div>
+                <div class="col-sm-3">
+                    <h1 class="heading">
+                        Newsletter
+                        
+                    </h1>
+                    <input type="text" name="" id="" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                    <a href="">Subscribe</a>
+                </div>
+                
+            
+            </footer>
+            
+            <div class="row bottom">
+                <hr>
+                <i class="copy" >&copy; copyrights since 2019</i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-instagram"></i>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $(".section2").hover(function(){
+                var a = [$('.slide1'), $('.slide3'), $('.slide2'), $('.slide4')];
+                
+                $(".slide1").css({"position":"relative","left":"-1089px",});
+                $('.slide2').css({"position":"relative","left":"-1089px","animation-duration":"4s"});
+                
+            });
+        });
+        
+    </script>
+</body>
+</html>
